@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: deep-learning-pod
+  labels:
+    app: image-search
+spec:
+  containers:
+  - name: inference-container
+    image: registry.cn-shenzhen.aliyuncs.com/amgs/nginx:latest
+  tolerations:
+  - key: "gpu-node"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
