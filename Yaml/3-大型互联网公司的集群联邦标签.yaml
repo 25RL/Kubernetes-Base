@@ -1,0 +1,10 @@
+# 跨集群服务发现标签
+metadata:
+  labels:
+    service.mesh: istio
+    networking.traffic-type: internal
+    cross-cluster.enabled: "true"
+    cluster.federation: global-federation-01
+    service.locality: multi-region
+    disaster.recovery: active-passive
+    latency.sla: p99<50ms

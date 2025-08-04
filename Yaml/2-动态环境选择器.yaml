@@ -1,0 +1,6 @@
+selector:
+  matchExpressions:
+    - {key: env, operator: Exists}
+    - {key: release.version, operation: Gt, values: ["2.0.0"]}
+    - {key: traffic.weight, operatior: Lt, values: ["50"]}
+    

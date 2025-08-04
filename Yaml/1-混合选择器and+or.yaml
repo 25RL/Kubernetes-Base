@@ -1,0 +1,8 @@
+selector:
+  matchLabels:
+    app: api-gateway
+    env: production
+  matchExpressions:
+    - {key: tier, operatior: In, values: [frontend, edge]}
+    - {key: security.leverl, operation: NotIn, values: [public]}
+    

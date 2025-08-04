@@ -1,0 +1,26 @@
+# 交易服务Pod标签
+metadata:
+  labels:
+    # 业务难度
+    app.kubernetes.io/name: transaction-service
+    app.kubernetes.io/instance: transaction-pod-001
+    app.kubernetes.io/version: "2.4.5"
+    app.kubernetes.io/component: transaction-engine
+    app.kubernetes.io/part-of: payment-system
+    app.kubernetes.io/managed-by: argocd
+
+    # 安全与合规维度
+    security.level: pci-dss
+    data.sensitivity: confidential
+    compliance.regions: us,eu,apec
+
+    # 资源调度维度
+    topology.kubernetes.io/region: us-west-1
+    topology.kubernetes.io/zone: us-west-2a
+    node-pool: high-memory-pool
+    cpu.architecture: amd64
+
+    # 监控与告警维度
+    monitoring.prometheus: "true"
+    alerting.severity: critical
+    logging.level: debug

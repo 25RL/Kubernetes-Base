@@ -1,0 +1,12 @@
+# 灰度发布Pod标签
+metadata:
+  labels:
+    app: product-catalog
+    env: staging
+    release.track: canary
+    release.version: 2.10.0-beta
+    traffic.weight: "30" # 30%流量
+    user.group: premium-users
+    region: north-america
+    experiment.id: ab-test-007
+    feature.flag: new-checkout-flow
